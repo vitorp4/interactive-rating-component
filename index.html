@@ -20,14 +20,26 @@
     </div>
       <h1>How did we do?</h1>
       <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
-      <div class="ratings">
-        <button onclick="chosen(1)">1</button>
-        <button onclick="chosen(2)">2</button>
-        <button onclick="chosen(3)">3</button>
-        <button onclick="chosen(4)">4</button>
-        <button onclick="chosen(5)">5</button>
-      </div>
-      <button class="submit" onclick="submit()">Submit</button>
+      
+      <form>
+        <fieldset class="ratings">
+          <input type="radio" value="1" name="rate" id="rate1" />
+          <label for="rate1">1</label>
+
+          <input type="radio" value="2" name="rate" id="rate2" />
+          <label for="rate2">2</label>
+         
+          <input type="radio" value="3" name="rate" id="rate3" />
+          <label for="rate3">3</label>
+         
+          <input type="radio" value="4" name="rate" id="rate4" />
+          <label for="rate4">4</label>
+         
+          <input type="radio" value="5" name="rate" id="rate5" />
+          <label for="rate5">5</label>
+        </fieldset>
+        <button type="submit">Submit</button>
+      </form>
     </div>
   </div>
 

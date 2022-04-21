@@ -1,23 +1,17 @@
-let activeRate;
+document.querySelector('form').addEventListener('submit', submit);
 
-function chosen(rate) {
-  activeRate = rate;
+function submit(event) {
+  event.preventDefault();
 
-  ratings = document.querySelectorAll(".ratings > button");
-  ratings.forEach((element) => {
-    element.classList.remove("active");
-  });
-  ratings[activeRate - 1].classList.add("active");
-}
+  let rate = document.querySelector('input[name="rate"]:checked')?.value;
 
-function submit() {
-  if (activeRate) {
+  if (rate) {
     let ratingCard = document.getElementById("rating-card");
     let thanksCard = document.getElementById("thanks-card");
 
     ratingCard.classList.add("hidden");
     thanksCard.classList.remove("hidden");
 
-    thanksCard.querySelector("#rate-chosen").innerHTML = activeRate;
+    thanksCard.querySelector("#rate-chosen").innerHTML = rate;
   }
 }
